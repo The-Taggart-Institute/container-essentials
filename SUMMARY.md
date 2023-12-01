@@ -8,8 +8,8 @@
 
 ## 2: Setup
 
-* [2-1: Lab Setup - VirtualBox](2-1_lab-virtualbox.md)
-* [2-2: Lab Setup - Azure](2-2_lab-azure.md)
+* [2-1: Lab Setup - VirtualBox](2-setup/2-1_lab-virtualbox.md)
+* [2-2: Lab Setup - Azure](2-setup/2-2_lab-azure.md)
 
 ## 3: Images and Containers
 
