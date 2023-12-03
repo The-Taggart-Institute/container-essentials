@@ -10,7 +10,7 @@ data "http" "my_ip" {
 }
 
 locals {
-  my_ip = jsondecode(data.http.my_ip.body).ip
+  my_ip = jsondecode(data.http.my_ip.response_body).ip
 }
 
 variable "admin_username" {
@@ -53,7 +53,7 @@ resource "azurerm_public_ip" "pip-ce-docker-manager" {
   allocation_method   = "Static"
 }
 
-# Create a network interface
+# Create Manager network interface
 resource "azurerm_network_interface" "nic-ce-docker-manager" {
   name                = "nic-ce-docker-manager"
   location            = azurerm_resource_group.rg-ce.location
@@ -64,6 +64,20 @@ resource "azurerm_network_interface" "nic-ce-docker-manager" {
     subnet_id                     = azurerm_subnet.subnet-ce.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.pip-ce-docker-manager.id
+  }
+
+}
+
+# Create Worker network interface
+resource "azurerm_network_interface" "nic-ce-docker-worker" {
+  name                = "nic-ce-docker-worker"
+  location            = azurerm_resource_group.rg-ce.location
+  resource_group_name = azurerm_resource_group.rg-ce.name
+
+  ip_configuration {
+    name                          = "ipconf-ce-docker-worker"
+    subnet_id                     = azurerm_subnet.subnet-ce.id
+    private_ip_address_allocation = "Dynamic"
   }
 
 }
@@ -106,13 +120,13 @@ resource "azurerm_subnet_network_security_group_association" "nsg-sub-ass-ce" {
   network_security_group_id = azurerm_network_security_group.nsg-ce.id
 }
 
-# Create a virtual machine
+# Create a Docker Manager
 resource "azurerm_linux_virtual_machine" "vm-ce-docker-manager" {
   name                            = "vm-ce-docker-manager"
   location                        = azurerm_resource_group.rg-ce.location
   resource_group_name             = azurerm_resource_group.rg-ce.name
   network_interface_ids           = [azurerm_network_interface.nic-ce-docker-manager.id]
-  size                            = "Standard_DS2_v2"
+  size                            = "Standard_B2s"
   computer_name                   = "docker-manager"
   admin_username                  = var.admin_username
   admin_password                  = var.admin_password
@@ -135,7 +149,40 @@ resource "azurerm_linux_virtual_machine" "vm-ce-docker-manager" {
 
 }
 
+# Create Docker Worker
+resource "azurerm_linux_virtual_machine" "vm-ce-docker-worker" {
+  name                            = "vm-ce-docker-worker"
+  location                        = azurerm_resource_group.rg-ce.location
+  resource_group_name             = azurerm_resource_group.rg-ce.name
+  network_interface_ids           = [azurerm_network_interface.nic-ce-docker-worker.id]
+  size                            = "Standard_B2s"
+  computer_name                   = "docker-worker"
+  admin_username                  = var.admin_username
+  admin_password                  = var.admin_password
+  disable_password_authentication = false
+
+  source_image_reference {
+    publisher = "canonical"
+    offer     = "0001-com-ubuntu-server-jammy"
+    sku       = "22_04-lts-gen2"
+    version   = "latest"
+  }
+
+
+  os_disk {
+    name                 = "osdisk-ce-docker-worker"
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
+    disk_size_gb         = 50
+  }
+
+}
+
 
 output "docker-manager-public-ip" {
   value = azurerm_public_ip.pip-ce-docker-manager.ip_address
+}
+
+output "docker-worker-private-ip" {
+  value = azurerm_network_interface.nic-ce-docker-worker.private_ip_address
 }
