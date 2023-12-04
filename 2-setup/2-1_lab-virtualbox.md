@@ -72,3 +72,11 @@ You should now be logged into your server.
 
 And that's it for our first VM setup!. In the next lesson, we'll install Docker and confirm it's working. 
 
+## Create the Second VM
+
+Now, repeat the VM creation process for our second Docker machine! The only differences:
+
+- Call this one `Docker-Worker` with hostname `docker-worker`
+- No need for a port forwarding rule. You can make one, but it's just as easy to SSH into the worker machine _from_ the manager. SSHception!
+
+Don't forget to copy down the IP address of the new VM though, for future reference.
