@@ -206,4 +206,5 @@ But congratulations; you've deployed your first containerized web application! I
 
 That's right—you're DevOpsing now.
 
-Now that we've seen how to use images, and even modify containers with changes we want, it's time to learn how to produce our own Docker images.
+Soon, we'll be making our own images with the resources we need inside. But before we get there, let's build on our knowledge of running containers to take advantage of some complex tools that can be difficult to install otherwise.
+

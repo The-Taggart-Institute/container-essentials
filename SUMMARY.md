@@ -16,6 +16,7 @@
 
 * [3-1: Images](./3-images-and-containers/3-1_images.md)
 * [3-2: Containers](./3-images-and-containers/3-2_containers.md)
+* [3-3: Running Tools in Containers](./3-images-and-containers/3-3_tools.md)
 
 ## 4: Building With Docker
 
