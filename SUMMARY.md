@@ -21,6 +21,8 @@
 ## 4: Building With Docker
 
 * [4-1: Dockerfiles](./4-building/4-1_dockerfiles.md)
+* [4-2: Image Registries](./4-building/4-2_registries.md)
+* [4-3: Volumes](./4-building/4-3_volumes.md)
 
 ## 5: Docker Security
 
