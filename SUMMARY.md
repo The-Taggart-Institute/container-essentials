@@ -24,6 +24,8 @@
 * [4-2: Image Registries](./4-building/4-2_registries.md)
 * [4-3: Volumes](./4-building/4-3_volumes.md)
 * [4-4: Networks](./4-building/4-4_networks.md)
+* [4-5: Compose](./4-building/4-5_compose.md)
+* [4-6: WordPress](./4-building/4-6_wordpress.md)
 
 ## 5: Docker Security
 
