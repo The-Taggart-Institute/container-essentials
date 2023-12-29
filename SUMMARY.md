@@ -27,9 +27,9 @@
 * [4-5: Compose](./4-building/4-5_compose.md)
 * [4-6: WordPress](./4-building/4-6_wordpress.md)
 
-## 5: Docker Security
+## 5: Swarm Mode
 
-## 6: Swarm Mode
+## 6: Docker Security
 
 ## 7: Beyond Docker
 
