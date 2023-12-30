@@ -13,7 +13,7 @@ The best known (and default for Docker) is [Docker Hub](https://hub.docker.com).
 [Quay](https://quay.io) is Red Hat's proprietary image repository, but many of the images hosted there can be used by the general public. [This Ubuntu image](https://quay.io/repository/bedrock/ubuntu), for example, works just fine. Try pulling it down.
 
 ```bash
-docker image pull quay.io/bedrock/Ubuntu
+docker image pull quay.io/bedrock/ubuntu
 ```
 
 Hey, look at that! Our image list now shows `quay.io/bedrock/ubuntu`, separately from the `ubuntu` image we pulled previously. And it works just like our others! Try it with `docker container run --rm -it quay.io/bedrock/ubuntu /bin/bash`.
