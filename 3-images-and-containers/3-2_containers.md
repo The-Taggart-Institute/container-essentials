@@ -1,6 +1,6 @@
 # 3-2: Containers
 
-We've already gotten a start on containers, but there's a lot more to running containers. For starters, we need to do a bit of cleanup. From our early experiments, we have several stopped or exited containers kicking around. While these don't take up  a lot of space, normally (they an though!), they can add up. We can remove old containers with `docker container prune`.
+We've already gotten a start on containers, but there's a lot more to running containers. For starters, we need to do a bit of cleanup. From our early experiments, we have several stopped or exited containers kicking around. While these don't take up  a lot of space, normally (they can though!), they can add up. We can remove old containers with `docker container prune`.
 
 ![prune](../img/3-2_prune.png)
 
