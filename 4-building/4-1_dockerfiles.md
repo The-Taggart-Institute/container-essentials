@@ -134,7 +134,7 @@ I'll again encourage you to refer to the [Dockerfile reference](https://docs.doc
 Time to build! We've already seen how `docker image build` works. Let's use the image name `mynodeapp`.
 
 ```bash
-docker image built -t mynodeapp .
+docker image build -t mynodeapp .
 ```
 
 Our image should now be available and visible in `docker image ls`.
