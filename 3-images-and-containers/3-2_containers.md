@@ -130,7 +130,7 @@ echo "<h1>New Page</h1>" > /usr/share/nginx/html/hello.html
 
 We don't have to leave the container to test this out. Running `curl localhost/hello.html` should confirm our page is now accessible!
 
-Echoing content into a file is cool, but not for large amounts of data. What if we wanted to use a text editor in the container? If we try to use `nano` or `vim`, we'll find they aren't that. But you know what is?
+Echoing content into a file is cool, but not for large amounts of data. What if we wanted to use a text editor in the container? If we try to use `nano` or `vim`, we'll find they aren't there. But you know what is?
 
 `apt`.
 
