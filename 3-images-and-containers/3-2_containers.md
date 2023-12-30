@@ -120,7 +120,7 @@ docker container exec -it <nginx_container> /bin/bash
 
 ### Echo
 
-First thing we need to know is where Nginx is serving up content from. We could read the documentation on [Docker Hub](https://hub.docker.com/_/nginx), simply `cat` out `/etc/nginx/nginx.conf.d/default.conf` in the container. That tells us the `root` of the site is at `/usr/share/nginx/html`. So that's where we need to put new data.
+First thing we need to know is where Nginx is serving up content from. We could read the documentation on [Docker Hub](https://hub.docker.com/_/nginx), simply `cat` out `/etc/nginx/nginx/conf.d/default.conf` in the container. That tells us the `root` of the site is at `/usr/share/nginx/html`. So that's where we need to put new data.
 
 Let's try it out. 
 
