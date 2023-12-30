@@ -55,4 +55,36 @@ Run `curl localhost` a few times. Do you get the same result every time?
 
 ![pikachu](../img/pika.jpg)
 
+If this is your first contact with load balanced, replicated services, this might be kinda freaky. What's happening here?
+
+The service load balancer is routing you to different containers based on availability and, frankly, whose turn it is.
+
+Let's run `docker container ls` again. If you only see one container, guess where the others are?
+
+SSH into the worker node from the manager node. Run `docker container ls` there.
+
+![5-2_container-ls](../img/5-2_container-ls.png)
+
+Ah, there they are! The manager assigned the other 2 containers to the worker node. The reason we don't see them cleanly with `docker service ls` is that _it shouldn't matter which container is where_ for most cases. But because we manually modified one of them, there's a discrepancy in some of the requests to the service.
+
+This is, as you might imagine, not the best way to deploy replicas. There's a much easier way to dynamically add material to our replicas, which we'll cover in the next chapter.
+
 ### Rollback
+
+But for now, let's get rid of those extra containers. We can revert our service to its _last good configuration_ with `docker service rollback`. Be aware tough, that this command works sort of like the "Back" button on your remote. Once you run `rollback` once, running it again will effectively revert to the change you _just_ rolled back from! Put another way, it can only go back one change.
+
+Let's do it though. Make sure to get back to your manager node!
+
+```bash
+docker service rollback web
+```
+
+`docker service ls` will confirm we're back to one replica.
+
+And to completely blow this thing away:
+
+```bash
+docker service rm web
+```
+
+It's worth looking at all the options available in `docker service create --help`, just to get a sense of what kinds of customizations are possible. But manually creating a gigantic one-liner isn't very DevOps (unless you're a k8s admin!). Instead, let's use a little YAML to declare our services in what we call a Stack.
