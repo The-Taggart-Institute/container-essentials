@@ -131,7 +131,9 @@ For any other replicated containers that _must_ share a single volume, like for 
 
 > "Does anyone actually use this?"
 
-Honestly these days, I'm not really certain how common third party volume drivers are. They can be handy for certain use cases, but they introduce a ton of complexity. Besides, there are other ways to connect to services like S3 buckets if we need to. Of course, for that we'd need to provide credentials to the container.
+Honestly these days, I'm not really certain how common third party volume drivers are. They can be handy for certain use cases, but they introduce a ton of complexity. For containers that need the same data across replicas, I recommend trying to find a way to add that data to the base image. 
+
+Besides, there are other ways to connect to services like S3 buckets if we need to. Of course, for that we'd need to provide credentials to the container.
 
 If only there were a way to securely send credentials to a container.
 
