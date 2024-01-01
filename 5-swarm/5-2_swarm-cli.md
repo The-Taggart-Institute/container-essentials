@@ -88,3 +88,4 @@ docker service rm web
 ```
 
 It's worth looking at all the options available in `docker service create --help`, just to get a sense of what kinds of customizations are possible. But manually creating a gigantic one-liner isn't very DevOps (unless you're a k8s admin!). Instead, let's use a little YAML to declare our services in what we call a Stack.
+

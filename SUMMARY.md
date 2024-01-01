@@ -31,7 +31,7 @@
 
 * [5-1: Swarm Setup](./5-swarm/5-1_swarm-setup.md)
 * [5-2: Swarm CLI](./5-swarm/5-2_swarm-cli.md)
-* [5-3: Swarm Compose](./5-swarm/5-3_swarm-compose.md)
+* [5-3: Swarm Stacks](./5-swarm/5-3_swarm-stacks.md)
 * [5-4: Docker Secrets](./5-swarm/5-4_secrets.md)
 
 ## 6: Docker Security
