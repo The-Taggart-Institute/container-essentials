@@ -60,7 +60,7 @@ We're going to take that IP, and go back to our NAT Network config. In the "Port
 
 ![VBox-6](../img/2-1_vbox-6.png)
 
-We're not set up to log into the server over SSH, which will be  a much nicer experience than trying to use the VirtualBox console. In a new terminal/PowerShell window, run:
+We're now set up to log into the server over SSH, which will be  a much nicer experience than trying to use the VirtualBox console. In a new terminal/PowerShell window, run:
 
 ```
 ssh -p 2222 user@localhost
@@ -69,6 +69,8 @@ ssh -p 2222 user@localhost
 ![VBox-7](../img/2-1_vbox-7.png)
 
 You should now be logged into your server.
+
+Before departing the port forwarding dialog, add another rule to forward 8888 to port 80. This will be useful for testing web applications.
 
 And that's it for our first VM setup!. In the next lesson, we'll install Docker and confirm it's working. 
 
