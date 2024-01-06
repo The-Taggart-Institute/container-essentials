@@ -36,6 +36,8 @@
 
 ## 6: Docker Security
 
+* [6-1: Users](./6-security/6-1_users.md)
+
 ## 7: Beyond Docker
 
 ## 8: Next Steps
