@@ -102,4 +102,41 @@ Making the file seems to work. Let's exit out of the container and see how it lo
 
 Well well well. The file has become the proper user's. 
 
+This is just the beginning of user management in Docker, and frankly a pretty cludgy method. For one thing, we can't guarantee that every system will have a `uid` of 1000. And we also shouldn't be relying on the host's users anyway. Instead we need a way of making a new, non-root user inside the container. For that, we need a Dockerfile.
+
+## Creating Users in Images
+
+The `USER` command in Dockerfile syntax directs the build to run as a given username/uid. But in order to use that, we have to make a user the hard way.
+
+Make a new directory on your Docker host called `userdemo`. Then move inside of it, and create the following Dockerfile:
+
+```docker
+FROM alpine:bash
+RUN adduser -h /home/notroot -D -s /bin/bash notroot 
+WORKDIR /home/notroot
+USER notroot
+ENTRYPOINT /bin/bash
+```
+
+What's up with that `adduser` command? First, it specifies a home directory of `/home/notroot`. Then, we bypass creating a password for this account (no need for one). Then we specify the shell as bash, which we have in this version of Alpine—the one we already made.
+
+We set our working directory to the new user's home folder, and then switch to our new user. When bash launches in this container, it'll be as `notroot` in that home directory.
+
+Build the image with:
+
+```bash
+docker image build -t alpine:notroot .
+```
+
+And run it.
+
+```
+docker container run -it alpine:notroot
+```
+
+![6-1_notroot](../img/6-1_notroot.png)
+
+Looks like things are a lot more secure! Using this method, we can create images to run applications as a specific user, rather than running everything as root. The Splunk images do a great job of this, for example. But we could also imagine a web application running as an application user, mitigating the impact of any remote code execution vulnerabilities in the application.
+
+This is a solid start to hardening Docker, but there's much more we can do. Next, we'll explore how to explicitly define _capabilities_ for our containers.
 
