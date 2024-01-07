@@ -86,7 +86,7 @@ services:
       MYSQL_PASSWORD: w0rdpres$
 ```
 
-Let me reiterate that this is _not the way_ to do this in production, but it will do to get us started.
+Let me reiterate that this is _not the way_ to do this in production, but it will do to get us started. We'll examine better secrets management in a later chapter.
 
 ## Volumes
 
