@@ -84,7 +84,7 @@ Exit out of the container and we'll try one more time.
 docker container run --rm -it --user 1000:1000 -v /:/host alpine:bash
 ```
 
-`id` should look correct now. So we're user `1000`, whoever that is. If we try now to `cat` `/home/etc/shadow`, we'll see that we've lost the privilege. Progress! But now, how does this fake user 1000 interact with files owned by the _real_ user 1000 on the host? Navigate to your home folder to find out.
+`id` should look correct now. So we're user `1000`, whoever that is. If we try now to `cat` `/host/etc/shadow`, we'll see that we've lost the privilege. Progress! But now, how does this fake user 1000 interact with files owned by the _real_ user 1000 on the host? Navigate to your home folder to find out.
 
 ```bash
 cd /host/home/<username>
