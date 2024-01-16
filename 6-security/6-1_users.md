@@ -138,5 +138,11 @@ docker container run -it alpine:notroot
 
 Looks like things are a lot more secure! Using this method, we can create images to run applications as a specific user, rather than running everything as root. The Splunk images do a great job of this, for example. But we could also imagine a web application running as an application user, mitigating the impact of any remote code execution vulnerabilities in the application.
 
+## Rootless Mode
+
+If you _really_ wanna guarantee that Docker containers run, and can only run, with limited permissions, you can [enable Rootless Mode](https://docs.docker.com/engine/security/rootless/). Because it's sort of destructive, we'll leave this as an exercise for the reader. But the purpose of rootless mode is to guarantee that no elevated host privileges are conferred to containers. The containers themselves may still run as user id 0, but they won't be able to pull off that same host escape/privilege escalation that we did before. 
+
+Rootless mode is a lot, but if you're seeking to maximize the security of your container runtime despite the [significant limitations](https://docs.docker.com/engine/security/rootless/#known-limitations), it's worth at least checking out.
+
 This is a solid start to hardening Docker, but there's much more we can do. Next, we'll explore how to explicitly define _capabilities_ for our containers.
 
