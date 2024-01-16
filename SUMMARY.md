@@ -38,6 +38,8 @@
 
 * [6-1: Users](./6-security/6-1_users.md)
 * [6-2: Capabilities](./6-security/6-2_capabilities.md)
+* [6-3: Resources](./6-security/6-3_resources.md)
+* [6-4: Static Analysis](./6-security/6-4_static-analysis.md)
 
 ## 7: Beyond Docker
 
