@@ -11,7 +11,6 @@
 * [2-1: Lab Setup - VirtualBox](2-setup/2-1_lab-virtualbox.md)
 * [2-2: Lab Setup - Azure](2-setup/2-2_lab-azure.md)
 * [2-3: Lab Setup - Install Docker](./2-setup/2-3_install-docker.md)
-
 ## 3: Images and Containers
 
 * [3-1: Images](./3-images-and-containers/3-1_images.md)
@@ -43,4 +42,7 @@
 
 ## 7: Beyond Docker
 
-## 8: Next Steps
+* [7-1: Podman](./7-beyond/7-1_podman.md)
+* [7-2: Kubernetes](./7-beyond/7-2_kubernetes.md)
+
+## 8: Exhibition of Mastery
