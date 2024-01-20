@@ -1,6 +1,7 @@
 # Summary
 
 * [Course Introduction](README.md)
+* [Acknowledgments](./acknowledgments.md)
 
 ## 1: Intro to Containers
 
