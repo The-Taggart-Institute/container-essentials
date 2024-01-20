@@ -199,3 +199,7 @@ docker image load < alpline_bash.tar
 (This avoids `cat` abuse, which we always strive for.)
 
 Up next, we'll dive deeper into running containers.
+
+## Check For Understanding
+
+**Explain the difference between an image and a container. Add a new package to an `alpine:bash` container and create a new image from that container.**

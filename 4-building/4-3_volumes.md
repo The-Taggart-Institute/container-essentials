@@ -86,3 +86,9 @@ See that `:ro` at the end there? It makes all the difference. Try adding content
 Mounting volumes read-only when we don't need write is a best practice, and a habit to get into. [Other options](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/storage_administration_guide/sect-using_the_mount_command-mounting-options#tabl-Using_the_mount_Command-Options) like `noexec` are worth considering as well.
 
 That concludes our introduction to volumes. In practice, we don't really create them manually like this, but it's important to know how they function. The same is true for our next topic: networks.
+
+## Check For Understanding
+
+1. **What is the difference between a bind mount and a managed volume? When would you use each?**
+
+2. **Think about backup strategies. How might you ensure that the data from a Docker volume is preserved?**

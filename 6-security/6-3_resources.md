@@ -112,3 +112,10 @@ services:
 This spec guarantees at least a quarter of one CPU and 128 megabytes will be available for our service.
 
 Our final security chapter is going to depart from configuration and focus on static scanning of our images. That's right: actual vulnerability management!
+
+## Check for Understanding
+
+1. **What is the difference between a CPU limit and a CPU reservation?**
+
+2. **Experiment with how low you can go! What's the minimum amount of memory required to run an `ubuntu` container?**
+

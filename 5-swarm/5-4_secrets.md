@@ -81,3 +81,8 @@ Why is this cool? Because now https://letsencrypt.orgwe've decoupled the image f
 
 Secrets are an important component in the secure usage of Docker, but certainly not the whole story. In the next Unit, we're going to cover security best practices for our containerized applications.
 
+## Check For Understanding
+
+1. **Explain _why_ environment variables are an insecure way of providing secrets to containers.**
+
+2. **Create a new image from `alpine:bash` that mounts secrets inside, and, using `curl`, sends them all to a listening server. Maybe you can use `netcat` on the host! This one takes some creativity, but I bet you can figure it out.**

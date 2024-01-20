@@ -140,3 +140,9 @@ If only there were a way to securely send credentials to a container.
 Oh wait—Docker Secrets exists! Let's move on to them.
 
 Make sure to `docker stack rm mystack` before kicking anything else off.
+
+## Check For Understanding
+
+1. **What is the difference between a service and a stack?**
+
+2. **Reference the Stack documentation. How can we specify on which nodes to place replicas?**

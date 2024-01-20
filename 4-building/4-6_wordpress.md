@@ -242,3 +242,6 @@ Still miles to go though. When you're ready, bring the app down with `docker com
 
 Next, we're going to finally use that second VM! It's time to enter...**Swarm Mode**.
 
+## Check For Understanding 
+
+1. **What would upgrading the WordPress app look like in a Docker app like this? What about upgrading PHP?**

@@ -113,3 +113,8 @@ Then, `docker compose up` will bring up our application, with custom-built image
 
 Now that we have the basics down, let's start to build a more realistic application. How about a WordPress blog that runs in containers? 
 
+## Check For Understanding
+
+1. **Why is a Compose file preferable to a one-liner `docker` command? Think about the entire product lifecycle.**
+
+2. **While referencing the Compose file specification, create a new application that uses a custom network.**

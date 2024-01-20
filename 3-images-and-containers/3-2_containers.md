@@ -195,7 +195,7 @@ The result should be something like:
 
 ![volume](../img/3-2_volume.png)
 
-We've successfully overwritten the existing path in the container with our volume. 
+We've successfully overwritten the existing path in the container with our volume. This attachment of a host directory to the container is known as a **bind mount**.
 
 As I said, there's a lot more to volumes, but we've finally arrived at a method for attaching content to a container that doesn't require us to modify a container that's already running. 
 
@@ -208,3 +208,9 @@ That's right—you're DevOpsing now.
 
 Soon, we'll be making our own images with the resources we need inside. But before we get there, let's build on our knowledge of running containers to take advantage of some complex tools that can be difficult to install otherwise.
 
+
+## Check For Understanding
+
+1. **What is "detached mode"? When do we want to use it when starting a container? What is the command line option flag to do so?**
+
+2. **Deploy a second Nginx container running on port 8080. Modify what it serves as its default page using a bind mount.**

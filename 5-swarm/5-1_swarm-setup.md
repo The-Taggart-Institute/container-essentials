@@ -52,3 +52,8 @@ This node joined a swarm as a worker.
 
 And that's it! We're in Swarm mode. In our next chapter, we'll start exploring our newly-unlocked command line powers.
 
+## Check For Understanding
+
+1. **Explain why Swarm might be beneficial for deploying an application. What use cases _don't_ make sense for Swarm?**
+
+2. **Use the `docker swarm` command to make the worker node leave the Swarm, then re-join it.**

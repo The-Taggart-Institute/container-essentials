@@ -114,6 +114,10 @@ Then you can clean up stopped containers and networks with their respective `pru
 
 And now, we're ready to explore how we _really_ build multi-container applications: Docker Compose!
 
+## Check For Understanding
+
+1. **Create a new network using a custom subnet. Attach an existing container to this network.**
+
 
 
 

@@ -96,5 +96,7 @@ And that concludes our brief exploration of registries. I want you to understand
 
 ## Check For Understanding
 
-Push the `alpine` image to your local registry. Use `docker image tag` to push more than one version, then use the HTTP API to list all the versions hosted in your registry.
+1. **Why would you use a different registry besides Docker Hub?**
+
+2. **Push the `alpine` image to your local registry. Use `docker image tag` to push more than one version, then use the HTTP API to list all the versions hosted in your registry.**
 

@@ -165,3 +165,8 @@ We will now be able to `curl localhost:8001`, and `docker container logs` for ou
 
 Congratulations on creating your first Docker image! Now that we know how to make them, we need to learn how to publish them. That's up next.
 
+## Check For Understanding
+
+1. **What is the difference between `CMD` and `ENTRYPOINT`? When would you use each?**
+
+2. **Create a new image from `ubuntu` or `alpine` base images that runs a custom script when the container launches.**

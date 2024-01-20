@@ -102,7 +102,7 @@ Alright, we went to all that trouble to install `ping`. Let's ping a thing!
 ping -c 4 google.com
 ```
 
-Sad trombone. We can't! By removing `CAP_NET_RAW`, we've prevented the `ping` command from opening a raw socket. This might seem like small potatoes, but consider an attacker that _somehow_ gained code execution on the container. and now are looking to pivot from the container o the host. Ping is now unavailable to them! For what it's worth, neither is `nmap`, even if they manage to install it or gain access to it. It's not a perfect defense, but it demonstrates how even a single dropped capability makes he application environment that much more hostile to potential attackers.
+Sad trombone. We can't! By removing `CAP_NET_RAW`, we've prevented the `ping` command from opening a raw socket. This might seem like small potatoes, but consider an attacker that _somehow_ gained code execution on the container. and now are looking to pivot from the container to the host. Ping is now unavailable to them! For what it's worth, neither is `nmap`, even if they manage to install it or gain access to it. It's not a perfect defense, but it demonstrates how even a single dropped capability makes he application environment that much more hostile to potential attackers.
 
 ## Capabilities in Production
 
@@ -113,3 +113,8 @@ Oh, and pro-tip: this works even better with a non-root user in the container, s
 Capabilities are complex, and therefore often overlooked as a security measure. I encourage you to explore them, if for no other reason than to better understand their implementation on all Linux systems. But when properly deployed, they can be an effective part of a hardening strategy.
 
 The next hardening strategy might not feel very security-oriented, but trust me: the security of your wallet might count on it.
+
+## Check For Understanding
+
+1. **What capability would be required to run `netcat` on port 80?**
+

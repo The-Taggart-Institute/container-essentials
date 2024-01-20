@@ -238,5 +238,7 @@ Phew! That was a lot, but now you have a handle on how to use Docker to quickly 
 
 ## Check For Understanding
 
-Find another tool install and run using Docker! 
+1. **What are the advantages and disadvantages to using containers to run certain tools?**
+
+2. **Find another tool install and run using Docker!**
 

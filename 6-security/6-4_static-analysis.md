@@ -142,3 +142,9 @@ Notice the `tags[2]` to grab the third tag rather than the first, and the use of
 
 Plenty of other commercial or freemium scanning solutions exists, like [Snyk](https://snyk.io/) or [JFrong XRay](https://jfrog.com/xray/). The tool chosen is less important than the process. The idea here is to introduce vulnerability scanning into the containerization pipeline so what known vulnerabilities can be remediated before shipping. It may seem dull, but between preventive scanning and having to handle an exploited vulnerability in your deployed containers, the boring process solution is always the right call.
 
+## Check For Understanding
+
+1. **Explain why it's valuable for developers to own a part of the security assessment process.**
+
+2. **Use `trivy` with `--format sarif` and `jq` to find all Critical vulnerabilities in the latest `nodejs` image.**
+

@@ -28,7 +28,7 @@ docker container run --rm -it -v /:/host alpine:bash
 
 Remember that custom Alpine image we made? Time to put it to use! Okay, what did we just do? We launched a throwaway container with the root of the host filesystem mounted at `/host` in the container. 
 
-Wait...is it possible? Could it be>
+Wait...is it possible? Could it be?
 
 ***Yes***
 
@@ -145,4 +145,11 @@ If you _really_ wanna guarantee that Docker containers run, and can only run, wi
 Rootless mode is a lot, but if you're seeking to maximize the security of your container runtime despite the [significant limitations](https://docs.docker.com/engine/security/rootless/#known-limitations), it's worth at least checking out.
 
 This is a solid start to hardening Docker, but there's much more we can do. Next, we'll explore how to explicitly define _capabilities_ for our containers.
+
+
+## Check For Understanding
+
+1. **Explain why `root` on the container is equivalent to `root` on the host. And then, how can we translate other existing host user permissions to the container?**
+
+2. **Create a new `nginx` image that runs as `www-data` on the container. Hint: you'll likely have to create a new user and change the ownership of some directories.**
 

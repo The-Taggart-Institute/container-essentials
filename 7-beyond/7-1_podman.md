@@ -73,3 +73,9 @@ That about does it for Podman. It's entirely optional, but you should know there
 
 Almost done! In our next and final chapter of material, we'll talk about that many-headed beast lurking in all conversations about containers: Kubernetes.
 
+## Check For Understanding
+
+1. **Why is "daemonless" design considered more secure?**
+
+2. **Use Podman to recreate some of our exercises in [4-3](../4-building/4-3_volumes.md) and [4-4](../4-building/4-4). Also try some secrets, like in [5-4](../5-swarm/5-4_secrets.md). What works? What doesn't? Does this seem like a viable replacement?**
+
