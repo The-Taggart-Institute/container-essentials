@@ -14,7 +14,7 @@ For one thing, VMs come with a lot of excess baggage. Each virtual machine is a 
 
 ![Containers vs VMs](/img/container-vs-vm.png)
 
-_Source: [Devopedia](https://devopedia.org)_Source
+_Source: [Devopedia](https://devopedia.org)_
 
 ## Enabling Patching
 
