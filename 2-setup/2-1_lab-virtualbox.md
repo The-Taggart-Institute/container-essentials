@@ -82,3 +82,6 @@ Now, repeat the VM creation process for our second Docker machine! The only diff
 - No need for a port forwarding rule. You can make one, but it's just as easy to SSH into the worker machine _from_ the manager. SSHception!
 
 Don't forget to copy down the IP address of the new VM though, for future reference.
+
+> If you're comfortable with cloning VirtualBox VMs, make sure to do a **full clone** and not a linked clone. Yes, it takes more space, but in testing I found that linked clones kill the NAT Network DHCP for some reason.
+
