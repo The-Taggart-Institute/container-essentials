@@ -46,3 +46,5 @@
 * [7-2: Kubernetes](./7-beyond/7-2_kubernetes.md)
 
 ## 8: Exhibition of Mastery
+
+* [8-1: Exhibition of Mastery](./8-exhibition/exhibition-of-mastery.md)
