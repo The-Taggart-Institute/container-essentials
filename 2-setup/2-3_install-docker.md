@@ -31,6 +31,7 @@ sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
+### Add Docker Repo
 
 Now that we have the key, we need to use it in our definition of a new source. We represent that source with a file in `/etc/apt/sources.list.d`, the contents of which is a specially-formatted line defining the source as a `.deb` repo, signed by the key we just saved. We use some of our machine's own info to fill in the details.
 
@@ -40,6 +41,7 @@ echo \
   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |
 	sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 ```
+### Install
 
 We then update our sources and install the list of packages needed to get up and running with Docker.
 
@@ -47,6 +49,8 @@ We then update our sources and install the list of packages needed to get up and
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
+
+### The `docker` Group
 
 Finally, we add our user to the `docker` users group. This is a **Super Bad Idea™** in production, as we'll discuss later, but for now it means we don't need to use `sudo` for all our Docker commands.
 
