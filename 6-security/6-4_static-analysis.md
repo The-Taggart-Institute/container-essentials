@@ -109,7 +109,7 @@ Now that we have this thing installed, what the heck do we do with it? As you mi
 Let's give ti a try on the same image we used Scout on.
 
 ```bash
-trivy image -o trivy_wordpress.txt php:php8.2-apache
+trivy image -o trivy_wordpress.txt wordpress:php8.2-apache
 ```
 
 As before, we're writing to a file because the default table format is large and messy. Opening it up, we see the summary up top, rather than at the bottom. That's convenient! Here's what I got as of this writing:
