@@ -140,7 +140,7 @@ cat trivy_wordpress.json | jq '.runs[0].tool.driver.rules| .[] | {id, "severity"
 
 Notice the `tags[2]` to grab the third tag rather than the first, and the use of `fullDescription` instead of `help`. Some, but not all, of these descriptions, will involve remediation recommendations. Unfortunately, there is no equivalent to `docker scout recommendations` for Trivy. You're on your own there.
 
-Plenty of other commercial or freemium scanning solutions exists, like [Snyk](https://snyk.io/) or [JFrong XRay](https://jfrog.com/xray/). The tool chosen is less important than the process. The idea here is to introduce vulnerability scanning into the containerization pipeline so what known vulnerabilities can be remediated before shipping. It may seem dull, but between preventive scanning and having to handle an exploited vulnerability in your deployed containers, the boring process solution is always the right call.
+Plenty of other commercial or freemium scanning solutions exists, like [Snyk](https://snyk.io/) or [JFrog XRay](https://jfrog.com/xray/). The tool chosen is less important than the process. The idea here is to introduce vulnerability scanning into the containerization pipeline so what known vulnerabilities can be remediated before shipping. It may seem dull, but between preventive scanning and having to handle an exploited vulnerability in your deployed containers, the boring process solution is always the right call.
 
 ## Check For Understanding
 

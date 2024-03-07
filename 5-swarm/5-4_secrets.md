@@ -77,7 +77,7 @@ I'm not gonna go make you buy a domain name to demo this, but here's the basic i
 2. A Swarm manager that makes Docker secrets out of the obtained certificate(s)
 3. Certificates passed into Nginx containers as secrets
 
-Why is this cool? Because now https://letsencrypt.orgwe've decoupled the image from the certificate, allowing both to be updated independently. And, y'know, not putting private keys in images. It _also_ means that every replica can get the certificate, regardless of what node it's on. 
+Why is this cool? Because now we've decoupled the image from the certificate, allowing both to be updated independently. And, y'know, not putting private keys in images. It _also_ means that every replica can get the certificate, regardless of what node it's on. 
 
 Secrets are an important component in the secure usage of Docker, but certainly not the whole story. In the next Unit, we're going to cover security best practices for our containerized applications.
 
