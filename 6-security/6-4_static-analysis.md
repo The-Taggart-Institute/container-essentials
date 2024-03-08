@@ -132,7 +132,7 @@ Now wait a tick. That's not what Scout found.
 
 So Trivy is finding a lot more. This has to do with how it's examining the image—not just the base OS, but software dependencies as well.
 
-Trivy also has `--format``options worth reviewing, including `json` and `--sarif`. The SARIF output matches the structure of Docker Scout's but there are some different tags. A `jq` query to match the Scout query would look like:
+Trivy also has `--format`options worth reviewing, including `json` and `--sarif`. The SARIF output matches the structure of Docker Scout's but there are some different tags. A `jq` query to match the Scout query would look like:
 
 ```bash
 cat trivy_wordpress.json | jq '.runs[0].tool.driver.rules| .[] | {id, "severity": .properties.tags[2], "text": .fullDescription.text} | select (.severity == "CRITICAL")'
