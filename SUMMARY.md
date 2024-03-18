@@ -12,6 +12,7 @@
 * [2-1: Lab Setup - VirtualBox](2-setup/2-1_lab-virtualbox.md)
 * [2-2: Lab Setup - Azure](2-setup/2-2_lab-azure.md)
 * [2-3: Lab Setup - Install Docker](./2-setup/2-3_install-docker.md)
+
 ## 3: Images and Containers
 
 * [3-1: Images](./3-images-and-containers/3-1_images.md)
