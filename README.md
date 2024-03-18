@@ -1,6 +1,6 @@
 # Container Essentials
 
-#[CE Banner](./img/ce_banner.png)
+![CE Banner](./img/ce_banner.png)
 
 This is the text component of the course [Container Essentials](https://taggartinstitute.org/p/container-essentials), hosted on [The Taggart Institute](https://taggartinstitute.org).
 
