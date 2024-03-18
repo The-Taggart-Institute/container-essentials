@@ -1,5 +1,7 @@
 # Container Essentials
 
+#[CE Banner](./img/ce_banner.png)
+
 This is the text component of the course [Container Essentials](https://taggartinstitute.org/p/container-essentials), hosted on [The Taggart Institute](https://taggartinstitute.org).
 
 ## AI-Free Disclaimer
@@ -67,3 +69,4 @@ So if you choose the VirtualBox route, be sure you have adequate compute resourc
 
 Discussion and support for this course takes place on [The Taggart Institute Discord](https://discord.gg/taggartinstitute). Please consider joining the community of learners there!
 
+![TTI Avater](./img/tti_avatar.png)
