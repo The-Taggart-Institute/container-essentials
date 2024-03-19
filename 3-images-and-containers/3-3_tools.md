@@ -226,7 +226,7 @@ smbclient.py 10.0.2.4
 
 If all goes according to plan, we'll be connected to our SMB server. Run `shares` to see the available shares. 
 
-If you see `STUFF`, then `use STUFF` to access that share. Then, just like a normal directory, you can `ls`. `hello.txt` should be there. Running `hello.txt` will download it to the container's filesystem. `exit` out of the SMB client to return to the container shell. 
+If you see `STUFF`, then `use STUFF` to access that share. Then, just like a normal directory, you can `ls`. `hello.txt` should be there. Running `get hello.txt` will download it to the container's filesystem. `exit` out of the SMB client to return to the container shell. 
 
 Finally, `cat hello.txt` will reveal the server message.
 
