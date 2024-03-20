@@ -67,7 +67,7 @@ docker container run -dit --name ubuntu-2 --network net-2 ubuntu
 docker container run -dit --name ubuntu-3 --network net-1 ubuntu
 ```
 
-So we've created three containers. The first two are attached to their respective networks. Te third, for now, is attached to `net-1`, but that's honestly just a matter of sequencing. The idea is to connect `ubuntu-3` to _both_ network. We can do this with `docker network connect`.
+So we've created three containers. The first two are attached to their respective networks. The third, for now, is attached to `net-1`, but that's honestly just a matter of sequencing. The idea is to connect `ubuntu-3` to _both_ network. We can do this with `docker network connect`.
 
 ```bash
 docker network connect net-2 ubuntu-3
