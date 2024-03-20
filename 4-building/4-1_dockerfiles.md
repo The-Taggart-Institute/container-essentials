@@ -99,7 +99,7 @@ EXPOSE 8000
 
 ### `ENTRYPOINT`
 
-Last instruction! We want our app to launch automatically when the container uns. That's what `ENTRYPOINT` is for. It tells Docker how to start the container. 
+Last instruction! We want our app to launch automatically when the container runs. That's what `ENTRYPOINT` is for. It tells Docker how to start the container. 
 
 Now there is also the `CMD` instruction, which would appear to do the same thing. What's the difference? `ENTRYPOINT` gives us a little more flexibility, because we can use it _in conjunction_ with `CMD` to provide additional arguments. Also, interestingly, when a user explicitly adds a command to `docker container run`, it is overriding anything in `CMD`, but _not_ `ENTRYPOINT`. That means we can have a base `ENTRYPOINT` and add more arguments at runtime.
 
