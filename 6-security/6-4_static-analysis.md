@@ -106,7 +106,7 @@ Now that we have this thing installed, what the heck do we do with it? As you mi
 
 > If you use any of the other resources scanned by Trivy, **Don't** move on from this chapter without trying those subcommands! It's really quite an impressive bit of kit.
 
-Let's give ti a try on the same image we used Scout on.
+Let's give it a try on the same image we used Scout on.
 
 ```bash
 trivy image -o trivy_wordpress.txt wordpress:php8.2-apache
